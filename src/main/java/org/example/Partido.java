@@ -8,6 +8,7 @@ public class Partido extends Equipo {
     private int golesEquipo1 = 0;
     private int golesEquipo2 = 0;
 
+
     //Constructor
     public Partido(String NOMBRE, String DESCRIPCION, Equipo equipo1, Equipo equipo2) {
         super(NOMBRE, DESCRIPCION);

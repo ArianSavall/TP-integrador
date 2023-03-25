@@ -1,6 +1,6 @@
 package org.example;
 
-public class Equipo {
+public class Equipo extends ResultadoEnum {
 
     private String NOMBRE;
     private String DESCRIPCION;
