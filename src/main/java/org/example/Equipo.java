@@ -2,8 +2,8 @@ package org.example;
 
 public class Equipo {
 
-    String NOMBRE;
-    String DESCRIPCION;
+    private String NOMBRE;
+    private String DESCRIPCION;
 
     public Equipo(String NOMBRE, String DESCRIPCION) {
         this.NOMBRE = NOMBRE;
