@@ -2,7 +2,9 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+        Equipo equipo1 = new Equipo("Argentina", "Campeon del mundo");
+        System.out.println("hola, soy " +equipo1.getNOMBRE() + " y soy " + equipo1.getDESCRIPCION());
     }
     
 }

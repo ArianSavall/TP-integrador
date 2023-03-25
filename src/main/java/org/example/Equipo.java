@@ -9,4 +9,12 @@ public class Equipo {
         this.NOMBRE = NOMBRE;
         this.DESCRIPCION = DESCRIPCION;
     }
+
+    public String getNOMBRE() {
+        return NOMBRE;
+    }
+
+    public String getDESCRIPCION() {
+        return DESCRIPCION;
+    }
 }
