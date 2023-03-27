@@ -1,5 +1,6 @@
 package org.example;
-
+import com.opencsv.bean.CsvBindByPosition;
+import com.opencsv.bean.CsvDate;
 public class Equipo extends ResultadoEnum {
 
     private String NOMBRE;

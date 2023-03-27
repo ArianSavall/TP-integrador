@@ -1,5 +1,5 @@
 package org.example;
-
+import com.opencsv.bean.CsvToBeanBuilder;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -13,7 +13,8 @@ public class Main {
 
         Lector puntaje = new Lector();
 
-        puntaje.puntaje();
+        puntaje.parsearResultado();
+        puntaje.parsearPronostico();
 
     }
     
