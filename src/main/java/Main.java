@@ -10,6 +10,7 @@ public class Main {
     Lector lector = new Lector (args[0],args[1]);
     List<Pronostico> pronosticos = lector.getPronostico();
     List<ResultadoEnum> resultados = lector.getResultados();
+    lector.calcularGanador(resultados);
 
      for(ResultadoEnum resultado : resultados) {
         resultado.imprimirResultados(resultado);

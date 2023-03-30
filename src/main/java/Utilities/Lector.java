@@ -15,8 +15,8 @@ import java.util.ArrayList;
 import java.util.List;
 public class Lector {
 
-private String rutaPronostico;
-private String rutaResultados;
+    private String rutaPronostico;
+    private String rutaResultados;
 
 
     public String getRutaPronostico() {
@@ -67,34 +67,42 @@ private String rutaResultados;
         return resultados;
     }
 
-//    public void CalcularGanador(List<ResultadoEnum> resultados) {
-//        CSVParser parser = null;
-//        CSVReader lector = null;
-//
-//        try {
-//            parser = new CSVParserBuilder()
-//                    .withSeparator(';')
-//                    .build();
-//            lector = new CSVReaderBuilder(new FileReader(this.rutaResultados))
-//                    .withCSVParser(parser)
-//                    .withSkipLines(1)
-//                    .build();
-//
-//            String[] fila;
-//
-//
-//
-//            while((fila = lector.readNext()) != null){
-//               if(fila[])
-//            }
-//
-//
-//        } catch (CsvValidationException | IOException e) {
-//            throw new RuntimeException(e);
-//        }
-//    }
+    public void calcularGanador(List<ResultadoEnum> resultados) {
+        CSVParser parser = null;
+        CSVReader lector = null;
+
+        try {
+            parser = new CSVParserBuilder()
+                    .withSeparator(';')
+                    .build();
+            lector = new CSVReaderBuilder(new FileReader(this.rutaResultados))
+                    .withCSVParser(parser)
+                    .withSkipLines(1)
+                    .build();
+
+            String[] fila;
 
 
+
+            while ((fila = lector.readNext()) != null) {
+
+                if (Integer.parseInt(fila[1]) > Integer.parseInt(fila[2])) //si Cant.goles1 es mayor a Cant.goles2
+                    System.out.println("Ganó el equipo 1");
+
+                if (Integer.parseInt(fila[1]) < Integer.parseInt(fila[2])) //si Cant.goles1 es menor a Cant.goles2
+                    System.out.println("Ganó el equipo 2");
+
+                if (Integer.parseInt(fila[1]) == Integer.parseInt(fila[2])) //si Cant.goles1 es igual a Cant.goles2
+                    System.out.println("Empataron ambos equipos");
+
+            }
+
+        }catch(CsvValidationException | IOException e){
+            throw new RuntimeException(e);
+        }
+
+
+    }
 }
 
 
