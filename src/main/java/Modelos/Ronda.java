@@ -1,4 +1,4 @@
-package org.example;
+package Modelos;
 
 public class Ronda extends Partido{
     private String nro;
@@ -8,9 +8,5 @@ public class Ronda extends Partido{
         super(NOMBRE, DESCRIPCION, equipo1, equipo2);
     }
 
-    //acá tiene que haber un metodo que lea "resultados.csv"
-    public int puntos(){
 
-     return puntaje;
-    }
 }

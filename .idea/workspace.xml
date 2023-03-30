@@ -5,12 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cfd45ee9-edfb-46f5-8757-19638af398c9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ArchivoPronostico.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ArchivoResultado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Modelos/Pronostico.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Utilities/Lector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Resultados.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pronostico.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Equipo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Equipo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Lector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Lector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ArchivoPronostico.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ArchivoResultado.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Equipo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Modelos/Equipo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Lector.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Partido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Modelos/Partido.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pronostico.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ResultadoEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Modelos/ResultadoEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Ronda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Modelos/Ronda.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,13 +52,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/Arián Savall/Desktop/Curso java inicial/Ejercicios/src",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Arián Savall\Desktop\Curso java inicial\TP integrador\Directorio\TP-integrador\src\main\resources" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="TP-integrador" />
+      <option name="PROGRAM_PARAMETERS" value="src\main\resources\pronostico.csv src\main\resources\Resultados.csv" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

@@ -1,4 +1,4 @@
-package org.example;
+package Modelos;
 
 public class Partido extends Equipo {
 

@@ -1,0 +1,100 @@
+package Utilities;
+
+import Modelos.Pronostico;
+import Modelos.ResultadoEnum;
+import com.opencsv.CSVParser;
+import com.opencsv.CSVParserBuilder;
+import com.opencsv.CSVReader;
+import com.opencsv.CSVReaderBuilder;
+import com.opencsv.bean.CsvToBeanBuilder;
+import com.opencsv.exceptions.CsvValidationException;
+
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+public class Lector {
+
+private String rutaPronostico;
+private String rutaResultados;
+
+
+    public String getRutaPronostico() {
+        return rutaPronostico;
+    }
+
+    public Lector(String rutaPronostico, String rutaResultados) {
+        this.rutaPronostico = rutaPronostico;
+        this.rutaResultados = rutaResultados;
+    }
+
+
+    public List<Pronostico> getPronostico() {
+
+        List<Pronostico> pronostico = new ArrayList<>();
+
+        try {
+            pronostico = new CsvToBeanBuilder<Pronostico>(new FileReader(this.rutaPronostico))
+                    .withSkipLines(1)
+                    .withSeparator(';')
+                    .withType(Pronostico.class)
+                    .build()
+                    .parse();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return pronostico;
+    }
+
+    public List<ResultadoEnum> getResultados() {
+
+        List<ResultadoEnum> resultados = new ArrayList<>();
+
+        try {
+            resultados = new CsvToBeanBuilder<ResultadoEnum>(new FileReader(this.rutaResultados))
+                    .withSkipLines(1)
+                    .withSeparator(';')
+                    .withType(ResultadoEnum.class)
+                    .build()
+                    .parse();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return resultados;
+    }
+
+//    public void CalcularGanador(List<ResultadoEnum> resultados) {
+//        CSVParser parser = null;
+//        CSVReader lector = null;
+//
+//        try {
+//            parser = new CSVParserBuilder()
+//                    .withSeparator(';')
+//                    .build();
+//            lector = new CSVReaderBuilder(new FileReader(this.rutaResultados))
+//                    .withCSVParser(parser)
+//                    .withSkipLines(1)
+//                    .build();
+//
+//            String[] fila;
+//
+//
+//
+//            while((fila = lector.readNext()) != null){
+//               if(fila[])
+//            }
+//
+//
+//        } catch (CsvValidationException | IOException e) {
+//            throw new RuntimeException(e);
+//        }
+//    }
+
+
+}
+
+
