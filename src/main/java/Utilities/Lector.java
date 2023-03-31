@@ -67,10 +67,10 @@ public class Lector {
         return resultados;
     }
 
-    public void calcularGanador(List<ResultadoEnum> resultados) {
+    public List<Integer> calcularGanador(List<ResultadoEnum> resultados) {
         CSVParser parser = null;
         CSVReader lector = null;
-
+        List<Integer> iResultados = new ArrayList<>(); //esta lista la vamos a usar para compararla con el pronostico y ver si el usuario acertó.
         try {
             parser = new CSVParserBuilder()
                     .withSeparator(';')
@@ -80,29 +80,32 @@ public class Lector {
                     .withSkipLines(1)
                     .build();
 
+            int i = 0;
             String[] fila;
-
 
 
             while ((fila = lector.readNext()) != null) {
 
                 if (Integer.parseInt(fila[1]) > Integer.parseInt(fila[2])) //si Cant.goles1 es mayor a Cant.goles2
                     System.out.println("Ganó el equipo 1");
-
+                    iResultados.add(i, 1);
                 if (Integer.parseInt(fila[1]) < Integer.parseInt(fila[2])) //si Cant.goles1 es menor a Cant.goles2
                     System.out.println("Ganó el equipo 2");
-
+                    iResultados.add(i, 2);
                 if (Integer.parseInt(fila[1]) == Integer.parseInt(fila[2])) //si Cant.goles1 es igual a Cant.goles2
                     System.out.println("Empataron ambos equipos");
+                    iResultados.add(i, 0);
 
+                   i++;
             }
 
         }catch(CsvValidationException | IOException e){
             throw new RuntimeException(e);
         }
-
-
+        System.out.println(iResultados);
+        return iResultados;
     }
+
 }
 
 
