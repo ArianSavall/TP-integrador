@@ -12,13 +12,14 @@ public class Main {
     List<ResultadoEnum> resultados = lector.getResultados();
 
     lector.calcularGanador(resultados);
+    lector.leerPronosticos(pronosticos);
 
-     for(ResultadoEnum resultado : resultados) {
-        resultado.imprimirResultados(resultado);
-     }
-     for(Pronostico pronostico : pronosticos){
-            pronostico.imprimirPronostico(pronostico);
-     }
+//     for(ResultadoEnum resultado : resultados) {
+//        resultado.imprimirResultados(resultado);
+//     }
+//     for(Pronostico pronostico : pronosticos){
+//            pronostico.imprimirPronostico(pronostico);
+//     }
 
     }
 
